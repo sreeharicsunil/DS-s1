@@ -54,7 +54,7 @@ int main() {
 
             sum_cost += min_cost;
             visited[column_no - 1] = 1;
-        }   // ← ← ← THIS MISSING BRACE FIXED YOUR ERROR ✔✔✔
+        }
 
         cost_matrix[vertex1 - 1][vertex2 - 1] =
         cost_matrix[vertex2 - 1][vertex1 - 1] = INF;
