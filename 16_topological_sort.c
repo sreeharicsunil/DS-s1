@@ -30,14 +30,14 @@ void topologicalSort(struct Graph* graph) {
     int top_order[MAX_VERTICES];
     int count = 0;
 
-    // Find all vertices with in-degree 0
+ 
     for (int i = 0; i < V; i++) {
         if (graph->in_degree[i] == 0) {
             queue[rear++] = i;
         }
     }
 
-    // Process queue
+   
     while (front < rear) {
         int u = queue[front++];
         top_order[count++] = u;
@@ -52,7 +52,7 @@ void topologicalSort(struct Graph* graph) {
         }
     }
 
-    // Check if cycle exists
+    
     if (count != V) {
         printf("There exists a cycle in the graph\n");
     } else {
